@@ -18,5 +18,13 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/addCat', 'CategoryController@store_cat');
+Route::get('/addCat', 'CategoryController@add_cat');
+Route::get('/addItem', 'ItemController@addItem');
+Route::get('/', 'ItemController@showAll');
+Route::get('/itemList', 'ItemController@showAll');
+Route::post('/store-item', 'ItemController@store_item');
+Route::post('/store-category', 'CategoryController@store_cat');
+Route::get('/delete/item/{item}', 'ItemController@deleteItem');
+Route::get('/update/item/{item}', 'ItemController@itemUpdate');
+Route::post('/UpdateItem/{item}', 'ItemController@updateItem');
 

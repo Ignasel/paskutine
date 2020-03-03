@@ -22,7 +22,7 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function store_cat()
+    public function add_cat()
     {
         return view ('shopend.pages.AddCat');
     }
@@ -33,6 +33,23 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
+    public function store_cat(Request $request)
+    {
+
+        $validateData = $request->validate([
+            'name' => 'required'
+        ]);
+
+        $category = Category::create([
+            'name' => request('name')
+        ]);
+
+        return redirect( '/');
+    }
+
+
+
     public function store(Request $request)
     {
         //

@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\Category;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Auth;
 
 class OrderController extends Controller
 {
@@ -12,9 +14,9 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function Index()
     {
-        //
+            //
     }
 
     /**
@@ -33,7 +35,7 @@ class OrderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store_item(Request $request)
     {
         //
     }

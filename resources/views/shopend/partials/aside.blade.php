@@ -26,7 +26,7 @@
     <div class="nav-wrapper">
         <ul class="nav flex-column">
             <li class="nav-item">
-                <a class="nav-link active" href="index.html">
+                <a class="nav-link active" href="/itemList">
                     <i class="material-icons">edit</i>
                     <span>Pagrindinė panelė</span>
                 </a>
@@ -38,9 +38,9 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="add-new-post.html">
+                <a class="nav-link " href="/addItem">
                     <i class="material-icons">note_add</i>
-                    <span>Pridėti skelbimą</span>
+                    <span>Pridėti prekę</span>
                 </a>
             </li>
             <li class="nav-item">
