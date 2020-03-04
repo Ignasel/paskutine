@@ -7,14 +7,19 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth',[]);
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function controlCat()
     {
-
+        $categories = Category::all();
+        return view ('shopend.pages.catControl', compact('categories'));
     }
 
     /**
@@ -95,8 +100,9 @@ class CategoryController extends Controller
      * @param  \App\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function deleteCat(Category $category)
     {
-        //
+        $category->delete();
+        return redirect('CatControl');
     }
 }

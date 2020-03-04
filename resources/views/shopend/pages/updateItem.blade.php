@@ -63,7 +63,7 @@
                             <div class="col-md-12">
                                 <div class="col-md-12">
                                     <label class="text-black" for="name">Nuotraukos:</label>
-                                    <img src="{{'/storage/'.$item->img}}" alt="Image" class="img-fluid rounded">
+                                    <img src="{{'storage/'.$item->img}}" alt="Image" class="img-fluid rounded">
                                     <input type="file" id="img" name="img" class="form-control">
                                 </div>
                             </div>

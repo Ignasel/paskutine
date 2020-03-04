@@ -3,20 +3,27 @@
 namespace App\Http\Controllers;
 
 use App\Order;
-use App\Category;
+use App\Item;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Input;
 use App\Http\Controllers\Auth;
 
 class OrderController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth',[]);
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function Index()
+    public function showOrders()
     {
-            //
+        $items = Item::all();
+        $orders = Order::all();
+        return view ('shopend.pages.orders', compact('orders', 'items'));
     }
 
     /**
@@ -69,9 +76,13 @@ class OrderController extends Controller
      * @param  \App\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Order $order)
+    public function updateStatus(Request $request, Order $order)
     {
-        //
+        Order::where('id', $order->id)
+            ->update(['orderStatus' => request('orderStatus')]);
+
+
+        return redirect('/Orders');
     }
 
     /**
@@ -80,8 +91,9 @@ class OrderController extends Controller
      * @param  \App\Order  $order
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Order $order)
+    public function deleteOrder(Order $order)
     {
-        //
+        $order->delete();
+        return redirect('/Orders');
     }
 }

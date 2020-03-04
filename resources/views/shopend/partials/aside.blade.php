@@ -5,7 +5,7 @@
                 <div class="d-table m-auto">
                     <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;"
                          src="/images/shards-dashboards-logo.svg" alt="Shards Dashboard">
-                    <span class="d-none d-md-inline ml-1">Administratoriaus prieiga</span>
+                    <span class="d-none d-md-inline ml-1">Administratorius</span>
                 </div>
             </a>
             <a class="toggle-sidebar d-sm-inline d-md-none d-lg-none">
@@ -44,13 +44,25 @@
                 </a>
             </li>
             <li class="nav-item">
+                <a class="nav-link " href="/CatControl">
+                    <i class="material-icons">note_add</i>
+                    <span>Valdyt kategorijas</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " href="/Orders">
+                    <i class="fas fa-list-alt"></i>
+                    <span>Užsakymai</span>
+                </a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link " href="/home">
                     <i class="fas fa-home"></i>
                     <span>Pagrindinis puslapis</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link " href="{{ route('logout') }}">
+                <a class="nav-link " href="/logout">
                     <i class="material-icons">error</i>
                     <span>Atsijungti</span>
                 </a>

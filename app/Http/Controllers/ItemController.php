@@ -9,9 +9,14 @@ use Illuminate\Support\Facades\Input;
 use File;
 use Illuminate\Support\Facades\Auth;
 use Gate;
+
 use App\Providers\AuthServiceProvider;
 class ItemController extends Controller
 {
+
+    public function __construct(){
+        $this->middleware('auth',[]);
+    }
     /**
      * Display a listing of the resource.
      *
