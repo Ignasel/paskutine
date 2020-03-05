@@ -41,6 +41,7 @@ class ItemController extends Controller
         return view ('shopend.pages.admin', compact('items','categories'));
     }
 
+
     /**
      * Store a newly created resource in storage.
      *
