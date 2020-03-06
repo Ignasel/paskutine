@@ -32,4 +32,9 @@ class ApiController extends Controller
 
     }
 
+    public function get_posts_by_id($id){
+        return Item::find($id);
+
+    }
+
 }
